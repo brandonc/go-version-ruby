@@ -2,9 +2,9 @@
 
 Gem::Specification.new do |s|
   s.name        = "go_version"
-  s.version     = "1.3.0"
+  s.version     = "0.1.0"
   s.summary     = "ruby bindings for the hashicorp/go-version lib"
-  s.description = "wraps native go-version in a ruby library for compatibility"
+  s.description = "wraps native go-version in a ruby library for certain compatibility"
   s.authors     = ["Brandon Croft"]
   s.email       = "bcroft@hashicorp.com"
   s.files       = Dir["{lib,ext}/**/*", "README.md"]
