@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "go_version"
-  s.version     = "1.3.0"
+  s.version     = "1.3.1"
   s.summary     = "ruby bindings for the hashicorp/go-version lib"
   s.description = "wraps native go-version in a ruby library for compatibility"
   s.authors     = ["Brandon Croft"]
