@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Brandon Croft"]
   s.email       = "bcroft@hashicorp.com"
   s.files       = Dir["{lib,ext}/**/*", "README.md"]
-  s.homepage    = "https://rubygems.org/gems/go_version"
+  s.homepage    = "https://github.com/brandonc/go-version-ruby"
   s.license     = "MIT"
 
   s.extensions = %w[ext/go-version/extconf.rb]
