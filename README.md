@@ -20,6 +20,6 @@ go 1.16+
 require 'go_version'
 
 constraint = GoVersion::Constraint.new("> 1.0.0")
-constraint.satisfies?("1.1.0") # true
-constraint.satisfies?("1.0.0") # false
+constraint.check("1.1.0") # true
+constraint.check("1.0.0") # false
 ```

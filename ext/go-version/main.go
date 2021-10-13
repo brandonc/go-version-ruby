@@ -6,8 +6,8 @@ import (
 	"github.com/hashicorp/go-version"
 )
 
-//export Satisfies
-func Satisfies(constraint *C.char, ver *C.char) bool {
+//export Check
+func Check(constraint *C.char, ver *C.char) bool {
 	constraints, err := version.NewConstraint(C.GoString(constraint))
 	if err != nil {
 		return false
