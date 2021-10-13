@@ -1,4 +1,6 @@
-Gem::Specification do |s|
+
+
+Gem::Specification.new do |s|
   s.name        = "go_version"
   s.version     = "1.3.0"
   s.summary     = "ruby bindings for the hashicorp/go-version lib"
@@ -10,4 +12,6 @@ Gem::Specification do |s|
   s.license     = "MIT"
 
   s.extensions = %w[ext/go-version/extconf.rb]
+
+  s.add_runtime_dependency "ffi", "~> 1.15"
 end

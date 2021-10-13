@@ -1,12 +1,22 @@
 require "mkmf"
 
-ENV['ARCH_FLAGS'] = RbConfig::CONFIG['ARCH_FLAG']
-if RUBY_PLATFORM =~ /darwin/
-  if RUBY_PLATFORM =~ /arm64/
-    ENV['ARCH_FLAGS'] = '-arch arm64'
-  else
-    ENV['ARCH_FLAGS'] = '-arch i386 -arch x86_64'
-  end
+find_executable("go")
+
+$objs = []
+def $objs.empty?; false; end
+
+create_makefile("go_version/go_version")
+
+case `#{CONFIG["CC"]} --version`
+when /Free Software Foundation/
+  ldflags = '-W1,--unresolved-symbols=ignore-all'
+when /clang/
+  ldflags = '-undefined dynamic_lookup'
 end
 
-`go build -buildmode=c-shared -o go-version.so main.go`
+File.open("Makefile", "a") do |f|
+  f.write <<-EOS.gsub(/^ {8}/, "\t")
+$(DLLIB):
+        CGO_CFLAGS='$(INCFLAGS)' CGO_LDFLAGS='#{ldflags}' go build -buildmode=c-shared -o $(DLLIB) .
+  EOS
+end
