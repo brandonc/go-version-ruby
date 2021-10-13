@@ -14,4 +14,5 @@ Gem::Specification.new do |s|
   s.extensions = %w[ext/go-version/extconf.rb]
 
   s.add_runtime_dependency "ffi", "~> 1.15"
+  s.add_development_dependency "rake-compiler", "~> 1.1"
 end
