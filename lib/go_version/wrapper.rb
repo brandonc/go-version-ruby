@@ -4,7 +4,11 @@ module GoVersion
   module Wrapper
     extend FFI::Library
 
-    ffi_lib File.join(File.expand_path(__dir__), "../../ext/go-version/go_version.bundle")
+    begin
+      ffi_lib File.join(File.expand_path(__dir__), "../../lib/go-version/go_version.bundle")
+    rescue LoadError
+      ffi_lib File.join(File.expand_path(__dir__), "../../ext/go-version/go_version.bundle")
+    end
     attach_function :Check, [:string, :string], :bool
   end
 end
