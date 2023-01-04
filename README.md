@@ -1,6 +1,6 @@
 # go-version-ruby
 
-Ruby bindings for [hashicorp/go-version](https://github.com/hashicorp/go-version)
+Ruby bindings for [hashicorp/go-version](https://github.com/hashicorp/go-version). Versions correspond to underlying go-version release versions.
 
 ### Why?
 
