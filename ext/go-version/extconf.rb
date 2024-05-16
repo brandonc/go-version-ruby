@@ -9,7 +9,7 @@ create_makefile("go_version/go_version")
 
 case `#{CONFIG["CC"]} --version`
 when /Free Software Foundation/
-  ldflags = '-W1,--unresolved-symbols=ignore-all'
+  ldflags = '-W1 --unresolved-symbols=ignore-all'
 when /clang/
   ldflags = '-undefined dynamic_lookup'
 end
