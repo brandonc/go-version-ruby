@@ -21,4 +21,16 @@ func Check(constraint *C.char, ver *C.char) bool {
 	return constraints.Check(checkVersion)
 }
 
+//export Valid
+func Valid(s *C.char) bool {
+	_, err := version.NewVersion(C.GoString(s))
+	return err == nil
+}
+
+//export ValidStrict
+func ValidStrict(s *C.char) bool {
+	_, err := version.NewSemver(C.GoString(s))
+	return err == nil
+}
+
 func main() {}

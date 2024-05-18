@@ -16,10 +16,20 @@ go 1.17
 
 ### Usage
 
+1. Using a constraint to check individual versions
+
 ```ruby
 require 'go_version'
 
 constraint = GoVersion::Constraint.new("> 1.0.0")
 constraint.check("1.1.0") # true
 constraint.check("1.0.0") # false
+```
+
+2. Checking if a version string is valid
+
+```ruby
+require 'go_version'
+
+GoVersion.valid?("1.1.0") # true
 ```
