@@ -33,3 +33,11 @@ require 'go_version'
 
 GoVersion.valid?("1.1.0") # true
 ```
+
+3. Compare two versions
+
+```ruby
+require 'go_version'
+
+GoVersion.compare("1.2.0", "1.2.1") # -1
+```

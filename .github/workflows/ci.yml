@@ -1,0 +1,39 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    env:
+      RUBY_VERSION: 3.3.1
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@3a77c29278ae80936b4cb030fefc7d21c96c786f # v1.185.0
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+
+      - name: Setup Go
+        uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 # v5.0.2
+        with:
+          go-version-file: ext/go-version/go.mod
+          cache-dependency-path: ext/go-version/go.sum
+
+      - name: Bundle install
+        run: |
+          bundle install --jobs 4 --retry 3
+
+      - name: Compile
+        run: |
+          rake install
+      
+      - name: Test
+        run: |
+          rake test
