@@ -37,4 +37,4 @@ jobs:
       
       - name: Test
         run: |
-          rake test
+          bundle exec rake test
