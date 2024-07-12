@@ -10,6 +10,7 @@ GEM
     ffi (1.17.0)
     ffi (1.17.0-x86_64-darwin)
     minitest (5.23.1)
+    rake (13.2.1)
 
 PLATFORMS
   ruby
@@ -18,6 +19,7 @@ PLATFORMS
 DEPENDENCIES
   go_version!
   minitest
+  rake
 
 BUNDLED WITH
    2.5.9

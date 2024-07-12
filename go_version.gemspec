@@ -11,6 +11,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Brandon Croft"]
   s.email       = "brandon.croft@gmail.com"
   s.files       = Dir["{lib,ext}/**/*", "README.md", "LICENSE"]
+  s.require_paths = "lib"
+
   s.homepage    = "https://github.com/brandonc/go-version-ruby"
   s.license     = "MPL-2.0"
 
@@ -18,4 +20,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "ffi", "~> 1.15"
   s.add_development_dependency "minitest"
+  s.add_development_dependency "rake"
 end
