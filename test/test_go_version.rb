@@ -1,4 +1,5 @@
 require "minitest/autorun"
+require "go_version"
 
 class TestGoVersion < Minitest::Test
   def test_valid_version
