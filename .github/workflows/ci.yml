@@ -32,7 +32,7 @@ jobs:
 
       - name: Compile
         run: |
-          rake install
+          make
       
       - name: Test
         run: |

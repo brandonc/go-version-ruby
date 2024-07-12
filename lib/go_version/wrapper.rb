@@ -4,7 +4,7 @@ module GoVersion
   module Wrapper
     extend FFI::Library
 
-    # Requires rake compile or gem install
+    # Requires rake install
     ffi_lib File.join(File.expand_path(__dir__), "../go_version.so")
 
     attach_function :Check, [:string, :string], :bool

@@ -5,6 +5,7 @@ require "go_version/version"
 Gem::Specification.new do |s|
   s.name        = "go_version"
   s.version     = GoVersion::VERSION
+  s.platform    = Gem::Platform::RUBY
   s.summary     = "Ruby bindings for the hashicorp/go-version lib."
   s.description = "Wraps native go-version in a ruby library for deep compatibility."
   s.authors     = ["Brandon Croft"]
