@@ -29,6 +29,7 @@ jobs:
       - name: Bundle install
         run: |
           bundle install --jobs 4 --retry 3
+          bundle info ffi
 
       - name: Compile
         run: |
