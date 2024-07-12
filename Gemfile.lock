@@ -1,21 +1,23 @@
+PATH
+  remote: .
+  specs:
+    go_version (1.7.0.pre.alpha)
+      ffi (~> 1.15)
+
 GEM
   remote: https://rubygems.org/
   specs:
     ffi (1.17.0)
     ffi (1.17.0-x86_64-darwin)
     minitest (5.23.1)
-    rake (13.2.1)
-    rake-compiler (1.2.7)
-      rake
 
 PLATFORMS
   ruby
   x86_64-darwin-23
 
 DEPENDENCIES
-  ffi (= 1.17.0)
-  minitest (= 5.23.1)
-  rake-compiler (= 1.2.7)
+  go_version!
+  minitest
 
 BUNDLED WITH
    2.5.9
