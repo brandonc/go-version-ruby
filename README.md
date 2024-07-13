@@ -8,7 +8,9 @@ This can be useful when you want to match the exact behavior of go-version from 
 
 ### Prerequisites
 
-go 1.17
+- go 1.22
+
+You need `go` to build the native extension for this gem. [Download and install go 1.22+](https://go.dev/doc/install) before installing this gem.
 
 ### Installing
 
