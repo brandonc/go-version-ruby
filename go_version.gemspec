@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.email       = "brandon.croft@gmail.com"
   s.files       = Dir["{lib,ext}/**/*", "README.md", "LICENSE"]
   s.require_paths = "lib"
+  s.required_ruby_version = ">= 2.5"
 
   s.homepage    = "https://github.com/brandonc/go-version-ruby"
   s.license     = "MPL-2.0"
@@ -19,6 +20,6 @@ Gem::Specification.new do |s|
   s.extensions = %w[ext/extconf.rb]
 
   s.add_runtime_dependency "ffi", "~> 1.15"
-  s.add_development_dependency "minitest"
-  s.add_development_dependency "rake"
+  s.add_development_dependency "minitest", "~> 5.24"
+  s.add_development_dependency "rake", "~> 13.2"
 end

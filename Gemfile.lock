@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    go_version (1.7.0.pre.alpha)
+    go_version (1.7.0)
       ffi (~> 1.15)
 
 GEM
@@ -9,7 +9,7 @@ GEM
   specs:
     ffi (1.17.0)
     ffi (1.17.0-x86_64-darwin)
-    minitest (5.23.1)
+    minitest (5.24.1)
     rake (13.2.1)
 
 PLATFORMS
@@ -18,8 +18,8 @@ PLATFORMS
 
 DEPENDENCIES
   go_version!
-  minitest
-  rake
+  minitest (~> 5.24)
+  rake (~> 13.2)
 
 BUNDLED WITH
    2.5.9
