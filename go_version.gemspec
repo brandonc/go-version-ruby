@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = "Wraps native go-version in a ruby library for deep compatibility."
   s.authors     = ["Brandon Croft"]
   s.email       = "brandon.croft@gmail.com"
-  s.files       = Dir["{lib,ext}/**/*", "README.md", "LICENSE"]
+  s.files       = Dir["ext/**/*", "lib/**/*.rb", "README.md", "LICENSE", "CHANGELOG.md"]
   s.require_paths = "lib"
   s.required_ruby_version = ">= 2.5"
 
